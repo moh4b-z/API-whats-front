@@ -36,6 +36,7 @@ async function renderContatod() {
 function cardContato(element){
     const lista = document.getElementById("contatos")
     const contato = document.createElement("div")
+    contato.className = "contato"
     const titulo = document.createElement("h3")
     titulo.textContent = element.name
     const descricao = document.createElement("span")

@@ -23,13 +23,50 @@ input{
     outline: none;
 }
 
+:root{
+    --gray-light: #e9edef;
+    --gray: #73828b;
+    --gray-dark: #2a3942;
+    --green-light: #00a884;
+    --green: #038368;
+    --green-mensagem: #005c4b;
+    --green-dark: #0a332c;
+    --background-dark-1: #202c33;
+    --background-dark-2: #111b21;
+    --background-dark-3: #0b141a;
+}
+
+
 body{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    display: flex;
 }
-main{
+
+header{
+    width: 5%;
+    height: 100%;
+    background-color: var(--background-dark-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px 10px 0px;
+}
+header div{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header button{
+    width: 60%;
+    aspect-ratio: 1 / 1;
+}
+
+main{
+    width: 95%;
     height: 100%;
     display: flex;
 }
@@ -38,31 +75,55 @@ main section{
     display: flex;
     flex-direction: column;
 }
+main section h2, main section h3, main section p{
+    color: var(--gray-light);
+}
+main section span{
+    color: var(--gray);
+}
 main section div{
     width: 100%;
 }
 main section input{
     max-height: 100%;
-    background-color: #418378;
-    border-radius: 50px;
+    background-color: transparent;
+    color: var(--gray-light);
 }
-button ion-icon{
+main section input::placeholder{
+    color: var(--gray);
+}
+ion-icon{
+    color: var(--gray);
     width: 100%;
     height: 100%;
-    color: #006454;
+}
+
+button:has(ion-icon) {
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #left{
     width: 20%;
-    background-color: #055245;
+    background-color: var(--background-dark-2);
 }
+.top{
+    padding: 5px;
+    width: 100%;
+    height: 15%;
+}
+
 #pesquisa{
-    height: 5%;
+    height: 40%;
     padding: 5px;
     display: flex;
-    gap: 5px;
     align-items: center;
     justify-content: space-around;
+    background-color: var(--gray-dark);
+    border-radius: 5px;
 }
 #pesquisa input{
     height: 100%;
@@ -71,19 +132,52 @@ button ion-icon{
 #pesquisa button{
     width: 20px;
     height: 20px;
-    background-color: #55dcc5;
+    background-color: transparent;
 }
 
 #contatos{
     height: 95%;
-    background-color: #083d34;
+    background-color: var(--background-dark-2);
     display: flex;
     flex-direction: column;
+    padding: 5px;
+    gap: 1px;
+}
+#contatos div.clickContato{
+    background-color: var(--gray-dark);
+}
+#contatos .contato:hover{
+    background-color: var(--gray-dark);
 }
 
 #right{
     width: 80%;
-    background-color: #024338;
+    background-color: var(--background-dark-3);
+}
+#right .top{
+    background-color: var(--background-dark-1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+}
+#right .top div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#right .top .contato{
+    width: 30%;
+    padding: 4px;
+}
+#right .top .confg{
+    width: 20%;
+    padding: 4px;
+}
+#right .top .confg button{
+    height: 70%;
+    aspect-ratio: 1 / 1;
 }
 #conversa{
     height: 92%;
@@ -91,20 +185,29 @@ button ion-icon{
     flex-direction: column;
 }
 #envio{
-    height: 8%;
+    height: 10%;
     padding: 10px;
     display: flex;
     gap: 40px;
     align-items: center;
     justify-content: space-around;
-    background-color: #083d34;
+    background-color: var(--background-dark-1);
+}
+#envio div{
+    height: 100%;
+    flex: 1;
+    padding: 4px;
+    background-color: var(--gray-dark);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+
 }
 #envio input{
     height: 100%;
-    flex: 1;
+    width: 100%;
 }
 #envio button{
-    width: 50px;
-    height: 50px;
-    background-color: #55dcc5;
+    height: 100%;
+    aspect-ratio: 1 / 1;
 }

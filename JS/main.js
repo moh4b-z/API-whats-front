@@ -48,4 +48,12 @@ function cardContato(element){
 
 }
 
+
+
+function abrirChat(){
+    const Contatos = document.getElementById("left")
+    Contatos.classList.toggle("chatTotal")
+}
+const buttonChat = document.getElementById("chat")
+buttonChat.addEventListener('click', abrirChat)
 renderContatod()

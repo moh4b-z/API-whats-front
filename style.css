@@ -146,9 +146,26 @@ button:has(ion-icon) {
     flex-direction: column;
     padding: 5px;
     gap: 1px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray) #00000000; 
 }
 #contatos div.clickContato{
     background-color: var(--gray-dark);
+}
+#contatos .contato{
+    display: flex;
+}
+#contatos .contato div{
+    height: 100%;
+}
+#contatos .contato .perfil{
+    width: 30%;
+}
+#contatos .contato .perfil img{
+    width: 100%;
+    border-radius: 50%;
 }
 #contatos .contato:hover{
     background-color: var(--gray-dark);
@@ -172,8 +189,13 @@ button:has(ion-icon) {
     justify-content: space-between;
 }
 #right .top .contato{
-    width: 30%;
+    width: auto;
     padding: 4px;
+    gap: 10px;
+}
+#right .top .contato img{
+    height: 100%;
+    border-radius: 50%;
 }
 #right .top .confg{
     width: 20%;
@@ -187,7 +209,52 @@ button:has(ion-icon) {
     height: 92%;
     display: flex;
     flex-direction: column;
+    padding: 10px;
+    padding-inline: 20px;
+    gap: 2px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray) #00000000;
 }
+
+#conversa .linhaMensagem{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#conversa .mensagem{
+    padding: 10px 14px;
+    width: auto;
+    max-width: 75%;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.4;
+    position: relative;
+    word-wrap: break-word;
+}
+#conversa .mensagem span{
+    display: block;
+    width: 100%;
+    text-align: end;
+}
+
+#conversa .linhaMensagem .meMensagem {
+    align-self: flex-end;
+    background-color: var(--green-mensagem);
+    border-bottom-right-radius: 1px;
+}
+
+#conversa .linhaMensagem .contatoMensagem {
+    align-self: flex-start;
+    background-color: var(--background-dark-1);
+    border-bottom-left-radius: 1px;
+}
+
+
 #envio{
     height: 10%;
     padding: 10px;

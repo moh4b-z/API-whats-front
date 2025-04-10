@@ -156,6 +156,8 @@ button:has(ion-icon) {
 }
 #contatos .contato{
     display: flex;
+    align-items: center;
+    gap: 10px;
 }
 #contatos .contato div{
     height: 100%;
@@ -166,6 +168,11 @@ button:has(ion-icon) {
 #contatos .contato .perfil img{
     width: 100%;
     border-radius: 50%;
+}
+#contatos .contato .perfilDados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #contatos .contato:hover{
     background-color: var(--gray-dark);
